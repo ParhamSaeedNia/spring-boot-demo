@@ -5,13 +5,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HelloController {
+public class ProfileController {
 
-    @Value("${spring.application.name}")
-    private String appName;
+    @Value("${profile.name}")
+    private String profileName;
 
-    @GetMapping("/hello")
-    public String hello() {
-        return "Hello, Spring Boot!";
+    @GetMapping("/profile")
+    public String getProfile() {
+        return profileName;
     }
 }
